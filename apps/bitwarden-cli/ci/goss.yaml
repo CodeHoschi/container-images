@@ -1,11 +1,18 @@
 ---
-# https://github.com/aelsabbahy/goss/blob/master/docs/manual.md#process
-process:
-  bw:
-    running: true
+# # https://github.com/aelsabbahy/goss/blob/master/docs/manual.md#process
+# process:
+#   bw:
+#     running: true
 
 # # https://github.com/aelsabbahy/goss/blob/master/docs/manual.md#port
 # port:
 #   # https://github.com/aelsabbahy/goss/issues/149
 #   tcp:8087:
 #     listening: true
+
+# https://github.com/aelsabbahy/goss/blob/master/docs/manual.md#file
+file:
+  /root/.config/Bitwarden CLI:
+    exists: true
+  /root/.config/Bitwarden CLI/data.json:
+    exists: true
