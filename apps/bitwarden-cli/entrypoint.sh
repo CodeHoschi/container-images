@@ -1,10 +1,11 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-set -e
+#shellcheck disable=SC1091
+test -f "/scripts/umask.sh" && source "/scripts/umask.sh"
 
-bw config server ${BW_HOST}
+bw config server ${BW__HOST}
 
-export BW_SESSION=$(bw login ${BW_USER} --passwordenv BW_PASSWORD --raw)
+export BW_SESSION=$(bw login ${BW__USER} --passwordenv BW__PASSWORD --raw)
 
 bw unlock --check
 

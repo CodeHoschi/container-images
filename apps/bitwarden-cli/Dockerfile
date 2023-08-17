@@ -1,6 +1,11 @@
-FROM debian:sid
+# FROM debian:sid
 # FROM ghcr.io/onedr0p/alpine:3.17.3
 # FROM alpine:3.18
+FROM ghcr.io/codehoschi/ubuntu:rolling@sha256:b4c02da88912a963097210beaa0bb889e2123285865d4af02e79041abe02850b
+
+ARG TARGETPLATFORM
+ARG VERSION
+ARG CHANNEL
 
 # ARG BW_HOST
 # ARG BW_USER
@@ -12,9 +17,9 @@ FROM debian:sid
 
 ENV BW_CLI_VERSION=2023.7.0
 
-ENV BW_HOST=
-ENV BW_USER=
-ENV BW_PASSWORD=
+# ENV BW_HOST=
+# ENV BW_USER=
+# ENV BW_PASSWORD=
 
 RUN apt update && \
     apt install -y wget unzip && \
@@ -36,8 +41,8 @@ RUN apt update && \
 
 # USER kah
 COPY ./apps/bitwarden-cli/entrypoint.sh /entrypoint.sh
-# CMD ["/entrypoint.sh"]
+CMD ["/entrypoint.sh"]
 
-ENTRYPOINT ["tail", "-f", "/dev/null"]
+# ENTRYPOINT ["tail", "-f", "/dev/null"]
 
 LABEL org.opencontainers.image.source="https://github.com/bitwarden/clients"
