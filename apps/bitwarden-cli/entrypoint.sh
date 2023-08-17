@@ -2,6 +2,8 @@
 
 #shellcheck disable=SC1091
 test -f "/scripts/umask.sh" && source "/scripts/umask.sh"
+test -f "/scripts/greeting.sh" && source "/scripts/greeting.sh"
+test -f "/scripts/sleep.sh" && source "/scripts/sleep.sh" 1 5
 
 bw config server ${BW__HOST}
 

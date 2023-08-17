@@ -10,9 +10,22 @@
 #   tcp:8087:
 #     listening: true
 
-# https://github.com/aelsabbahy/goss/blob/master/docs/manual.md#file
-file:
-  /root/.config/Bitwarden CLI:
-    exists: true
-  /root/.config/Bitwarden CLI/data.json:
-    exists: true
+# https://github.com/goss-org/goss/blob/master/docs/manual.md#command
+command:
+  'bw version':
+    exit-status: 0
+    exec: "bw --version"
+    stdout:
+    - 2023.7.0
+
+# # https://github.com/aelsabbahy/goss/blob/master/docs/manual.md#file
+# file:
+#   /usr/local/bin/bw:
+#     exists: true
+#     filetype: file
+#   /root/.config/Bitwarden CLI:
+#     exists: true
+#     filetype: directory
+#   /root/.config/Bitwarden CLI/data.json:
+#     exists: true
+#     filetype: file
