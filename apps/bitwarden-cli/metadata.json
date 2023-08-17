@@ -3,7 +3,7 @@
     "base": false,
     "channels": [
         {
-            "name": "stable",
+            "name": "2023.7.0",
             "platforms": [
                 "linux/amd64"
             ],
