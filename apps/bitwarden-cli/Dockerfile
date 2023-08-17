@@ -1,4 +1,3 @@
-# FROM ubuntu:jammy
 FROM ghcr.io/codehoschi/ubuntu:rolling@sha256:b4c02da88912a963097210beaa0bb889e2123285865d4af02e79041abe02850b
 
 ARG TARGETPLATFORM
@@ -17,7 +16,5 @@ RUN apt update && \
 
 COPY ./apps/bitwarden-cli/entrypoint.sh /entrypoint.sh
 CMD ["/entrypoint.sh"]
-
-# ENTRYPOINT ["tail", "-f", "/dev/null"]
 
 LABEL org.opencontainers.image.source="https://github.com/bitwarden/clients"
