@@ -16,7 +16,7 @@ command:
     exit-status: 0
     exec: "bw --version"
     stdout:
-    - 2023.7.0
+    - 2023.8.2
 
 # # https://github.com/aelsabbahy/goss/blob/master/docs/manual.md#file
 # file:
